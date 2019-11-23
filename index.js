@@ -38,9 +38,6 @@ app.get('/', (req, res) => {
 
 });
 
-// Direct routes to appropriate files
-
-
 app.use('/api/parkingSpots', parkingSpots)
 
 
