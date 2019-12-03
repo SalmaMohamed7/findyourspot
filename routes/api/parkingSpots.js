@@ -20,8 +20,8 @@ router.post('/', async (req,res) => {
 			userId,
 		});
     await parkingSpot.create(newParkingSpot);
-    console.log(newEducationalOrganization.email)
-     res.json({msg:'parking spot was created successfully', data: newEducationalOrganization})
+    console.log(newParkingSpot.name)
+     res.json({msg:'parking spot was created successfully', data: newParkingSpot})
     }
 
     catch(error) {
@@ -30,5 +30,10 @@ router.post('/', async (req,res) => {
     }  
  });
 
+ //view all
+ router.get('/', async (req,res) => {
+    const parkingSpots = await parkingSpot.find()
+    res.json({data: parkingSpots})
+})
 
 module.exports = router
