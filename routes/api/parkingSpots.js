@@ -35,5 +35,27 @@ router.post('/', async (req,res) => {
     const parkingSpots = await parkingSpot.find()
     res.json({data: parkingSpots})
 })
+//get by name
+router.get('/:_id',async(req, res) =>{
 
+    const id = req.params._id;
+    parkingSpot.findById(id)
+      
+        .exec()
+        .then(doc => {
+          if (doc) {
+            res.status(200).json(doc);
+          
+          } else {
+            res
+              .status(404)
+              .json({ message: "No Parking spot found for provided ID" });
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json({ error: err });
+        });
+      } 
+      );
 module.exports = router
