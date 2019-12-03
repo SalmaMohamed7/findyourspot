@@ -6,7 +6,7 @@ module.exports={
         const createSchema ={
             
             name: Joi.string().required(),
-            status: Joi.string().reguired(),
+            status: Joi.string().required(),
             userId: Joi.number()
         
         }
