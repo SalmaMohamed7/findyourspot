@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import Login from './components/pages/Login'
+import ParkingSpotsApp from './ParkinSpotsApp'
 
 class App extends Component {
   
@@ -9,7 +10,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <Route exact path = "/login" component = {Login}/>
+        <Route exact path = "/" component = {Login}/>
+        <Route exact path = "/parking-spots/:email" component = {ParkingSpotsApp}/>
+
 
       </div>
       </Router>
