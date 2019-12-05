@@ -35,6 +35,28 @@ router.post('/', async (req,res) => {
     const parkingSpots = await parkingSpot.find()
     res.json({data: parkingSpots})
 })
+router.put('/:id', async (req, res) => {
+    
+  //const isValidated = validator.updateValidation(req.body)
+  console.log("in put parking spots")
+  // if (isValidated.error)
+  // {
+  //     // console.log(isValidated.error.details[0].message)
+  //     // return res.status(400).send({ error: isValidated.error.details[0].message });
+  // }
+  
+  // else{
+      console.log("updating parking spots..")
+      console.log(req.body)
+      console.log(req.params.id)
+
+      console.log("here")
+  await parkingSpot.findByIdAndUpdate(req.params.id, req.body)
+  .exec()
+  .then(r => {return res.json({msg:'parking spot was updated successfully'})})
+  .catch(err => {console.log(err); return res.status(400).send(`Sorry, couldn't update a parkingSpot with that id !`) })
+ // }
+})
 //get by name
 router.get('/:_id',async(req, res) =>{
 
@@ -58,4 +80,5 @@ router.get('/:_id',async(req, res) =>{
         });
       } 
       );
+    
 module.exports = router

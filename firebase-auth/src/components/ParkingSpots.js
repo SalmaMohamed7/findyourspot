@@ -30,9 +30,14 @@ class ParkingSpots extends Component {
     return (
     <div>
     {this.props.parkingSpots.map((parkingSpot) => (
-      <ParkingSpotItem key = {parkingSpot._id} parkingSpot = {parkingSpot} />
+      <ParkingSpotItem key = {parkingSpot._id} parkingSpot = {parkingSpot}
+      reserveParkingSpot={this.props.reserveParkingSpot}
+      unreserveParkingSpot={this.props.unreserveParkingSpot}
+
+      />
 
     ))}
+
     </div>)
   }
 }

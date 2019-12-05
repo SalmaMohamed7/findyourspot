@@ -12,4 +12,13 @@ module.exports={
         }
         return Joi.validate(request, createSchema)
     },
+    updateValidation: request =>{
+        const updateSchema ={
+            status : Joi.boolean().required(),
+            email : Joi.string().required()
+
+        }
+        return Joi.validate(request, updateSchema)
+
+    }
 }
