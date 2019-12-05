@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import { Link } from 'react-router-dom';
+import bgimg from '../pages/unsplash-car-parking.jpg'
 
 firebase.initializeApp({
   apiKey: "AIzaSyBPqr-eMwjpjFCX7-sSLgXHcDcB1jMqpwY",
@@ -34,7 +34,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style ={ { backgroundImage: "url("+bgimg+")" } }>
+          
         {this.state.isSignedIn ? (
           <span>
             <div>Signed In!</div>
