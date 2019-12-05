@@ -38,10 +38,11 @@ class Login extends Component {
           
         {this.state.isSignedIn ? (
           <span>
+           
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
-            <Link to={`/parking-spots`} > PARK </Link>
+            <Link to={`/parking-spots/${firebase.auth().currentUser.email}`} > PARK </Link>
    
           </span>
         ) : (
