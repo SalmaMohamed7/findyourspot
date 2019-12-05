@@ -32,10 +32,10 @@ class ParkingSpotsApp extends Component {
   }
   reserveParkingSpot =(_id) => {
     console.log(_id)
-
+    const { email } = this.props.match.params
     axios.put(`http://localhost:5000/api/parkingSpots/${_id}`, {
       "status":true,
-      "email":"mayar_zakaria@yahoo.com"
+      "email":email
     })
           .then((window.location.reload()))
           .catch(e => { alert(e); console.log(e) })
