@@ -9,12 +9,14 @@ const parkingSpotSchema = new Schema({
         required: true
     },
     status: {
-        type: String,
-        required: true
+        type: Boolean,
+        required: true,
+        default:false
     },
-    userId: {
-        type: Number,
-        required: true
+    email: {
+        type: String,
+        default:null
+       
     }
 
 })

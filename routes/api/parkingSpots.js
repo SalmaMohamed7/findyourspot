@@ -13,11 +13,11 @@ router.post('/', async (req,res) => {
     try {
      const isValidated = validator.createValidation(req.body)
      if (isValidated.error) return res.status(400).send({ error: isValidated.error.details[0].message })
-        const { name, status, userId} = req.body;
+        const { name, status, email} = req.body;
         const newParkingSpot = new parkingSpot({
 			name,
 			status,
-			userId,
+			email,
 		});
     await parkingSpot.create(newParkingSpot);
     console.log(newParkingSpot.name)
