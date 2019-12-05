@@ -6,8 +6,8 @@ module.exports={
         const createSchema ={
             
             name: Joi.string().required(),
-            status: Joi.string().required(),
-            userId: Joi.number()
+            status: Joi.boolean(),
+            email: Joi.string()
         
         }
         return Joi.validate(request, createSchema)
