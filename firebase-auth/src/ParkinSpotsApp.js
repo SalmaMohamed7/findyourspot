@@ -9,8 +9,8 @@ class ParkingSpotsApp extends Component {
   
   getStyleEduOrg = () => {
     return {
-      backgroundColor : '#000',
-      color : '#f0f0f0'
+      backgroundColor : 'black',
+      color : 'purple'
     }
   
   }
@@ -84,7 +84,7 @@ const spinnerStyle={
   //background:'#193E43',
   width: '5rem',
   height: '5rem',
-  color:'#e5e8e8',
+  color:'purple',
   textAlign:'center',
   fontFamily:'ariel',
   padding:'10px'

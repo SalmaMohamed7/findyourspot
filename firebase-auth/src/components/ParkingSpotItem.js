@@ -16,8 +16,8 @@ class ParkingSpotItem extends Component {
         <div style={this.getStyle()}>
             <p>Name: {name}</p>
             <p>Email: {email}</p>
-            <button onClick={this.props.reserveParkingSpot.bind(this,_id)} style={btnStyle}>reserve</button>
-            <button onClick={this.props.unreserveParkingSpot.bind(this,_id)} style={btnStyle}>unreserve</button>
+            <button onClick={this.props.reserveParkingSpot.bind(this,_id)} style={btnStyle}>park</button>
+            <button onClick={this.props.unreserveParkingSpot.bind(this,_id)} style={btnStyle}>leave</button>
 
         </div>
     )
@@ -29,11 +29,11 @@ class ParkingSpotItem extends Component {
 }
 const btnStyle={
     color: 'white',
-    background:'red',
+    background:'purple',
     fontSize: 20,
-    borderColor: 'black',
+    borderColor: 'grey',
     borderWidth: 3,
-    borderRadius:'80%',
+    borderRadius:'70%',
     cursor:'pointer'
     // float:'down-right'
   }
