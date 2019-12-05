@@ -37,27 +37,6 @@ router.post('/', async (req,res) => {
 })
 router.put('/:id', async (req, res) => {
     
-<<<<<<< HEAD
-    const isValidated = validator.updateValidation(req.body)
-    console.log("in put parking spots")
-    if (isValidated.error)
-    {
-        console.log(isValidated.error.details[0].message)
-        return res.status(400).send({ error: isValidated.error.details[0].message });
-    }
-    
-    else{
-        console.log("updating parking spots..")
-        console.log(req.body)
-        console.log(req.params.id)
-
-        console.log("here")
-    await parkingSpot.findByIdAndUpdate(req.params.id, req.body)
-    .exec()
-    .then(r => {return res.redirect(303, `/api/parkingSpot/${req.params.id}`) })
-    .catch(err => {console.log(err); return res.status(400).send(`Sorry, couldn't update a parkingSpot with that id !`) })
-    }
-=======
   //const isValidated = validator.updateValidation(req.body)
   console.log("in put parking spots")
   // if (isValidated.error)
@@ -77,7 +56,6 @@ router.put('/:id', async (req, res) => {
   .then(r => {return res.json({msg:'parking spot was updated successfully'})})
   .catch(err => {console.log(err); return res.status(400).send(`Sorry, couldn't update a parkingSpot with that id !`) })
  // }
->>>>>>> 26ab1ec77ac468508b2b14d60bee1bfa0e197451
 })
 //get by name
 router.get('/:_id',async(req, res) =>{

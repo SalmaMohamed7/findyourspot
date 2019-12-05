@@ -16,8 +16,8 @@ class ParkingSpotItem extends Component {
         <div style={this.getStyle()}>
             <p>Name: {name}</p>
             <p>Email: {email}</p>
-            <button onClick={this.props.reserveParkingSpot.bind(this,_id)} style={btnStyle}>park</button>
-            <button onClick={this.props.unreserveParkingSpot.bind(this,_id)} style={btnStyle}>leave</button>
+            <button onClick={this.props.reserveParkingSpot.bind(this,_id,status)} style={btnStyle}>park</button>
+            <button onClick={this.props.unreserveParkingSpot.bind(this,_id,status,email)} style={btnStyle}>leave</button>
 
         </div>
     )

@@ -30,29 +30,47 @@ class ParkingSpotsApp extends Component {
     .catch(error=> this.ERROR.bind(error))
 
   }
-  reserveParkingSpot =(_id) => {
+  reserveParkingSpot =(_id,status) => {
     console.log(_id)
     const { email } = this.props.match.params
+    if(status === true){
+      alert("someone is parking here!")
+    }
+    else{
     axios.put(`http://localhost:5000/api/parkingSpots/${_id}`, {
       "status":true,
       "email":email
     })
           .then((window.location.reload()))
           .catch(e => { alert(e); console.log(e) })
+  }
     console.log(_id)
   }
-  unreserveParkingSpot =(_id) => {
+  unreserveParkingSpot =(_id,status,emails) => {
     console.log(_id)
+    const { email } = this.props.match.params
+    console.log(email)
+    console.log(emails)
 
-    axios.put(`http://localhost:5000/api/parkingSpots/${_id}`, {
+    if(status === false){
+      alert("no one is parking here!")
+    }
+    else{
+      if(email === emails ){
+        axios.put(`http://localhost:5000/api/parkingSpots/${_id}`, {
       "status":false,
       "email":" "
     })
           .then((window.location.reload()))
           .catch(e => { alert(e); console.log(e) })
     console.log(_id)
+      }
+      else{
+        alert("you're not the one parking here!")
+    
   }
-  
+}
+  }  
   render() {
     return this.state.error?<h1>process could not be complete</h1>:this.state.loading?
     <div class="text-center">
