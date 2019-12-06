@@ -1,0 +1,32 @@
+version: '2.1'
+
+services:
+    # react:
+        #container_name: docker-react-met
+        #build: "./findyourspot/firebase-auth"
+        #ports:
+ express:
+     build: "./"
+     ports: 
+        - "5000:5000"
+# app: 
+# build: .
+#   enviroment:
+#      DATABASE_NAME: myapp
+#     ports:
+#         - 5000:5000
+#         links:
+#             - mongodb
+#         depends_on:
+#             - mongodb
+#      mongodb:
+#         image: mongo:latest
+#         container_name: "mongodb"
+#         environment:
+#           - MONGO_DATA_DIR=/data/db
+#           - MONGO_LOG_DIR=/dev/null
+#         volumes:
+#           - ./data/db:/data/db
+#         ports:
+#             - 27017:27017
+#         command: mongod --smallfiles --logpath=/dev/null # --quiet    
