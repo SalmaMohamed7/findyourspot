@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ParkingSpotItem from './ParkingSpotItem';
-import PropTypes from 'prop-types';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const styles = {
   button: {
