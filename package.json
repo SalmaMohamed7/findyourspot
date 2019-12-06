@@ -1,0 +1,29 @@
+{
+  "name": "findyourspot",
+  "version": "1.0.0",
+  "description": "acml project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalmaMohamed7/findyourspot.git"
+  },
+  "author": "findyourspot",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "joi-objectid": "^2.0.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.22",
+    "node": "^11.12.0",
+    
+  },
+  "bugs": {
+    "url": "https://github.com/SalmaMohamed7/findyourspot/issues"
+  },
+  "homepage": "https://github.com/SalmaMohamed7/findyourspot#readme"
+}
