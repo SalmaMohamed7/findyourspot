@@ -1,3 +1,24 @@
+frontend dependencies:
+axios:we used it for http requests like getting all parkings spots.
+
+firebase:used it for firebase authentication. for google log in
+
+react:for rendering and showing our front end
+
+react-dom:ReactDOM is a package that provides DOM specific methods that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page.
+
+React-firebase: to have firebase auth. in our frontend.
+
+react-firebaseui:FirebaseUI React Components provides React Wrappers on top of the Firebase UI Web library and notably Firebase UI Auth.
+
+react-router:React Router is the standard routing library for React. From the docs: “React Router keeps your UI in sync with the URL.
+
+react-router-dom: to take the the route and link to other pages
+
+react-scripts:react-scripts is a set of scripts from the create-react-app starter pack. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -29,7 +50,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Note: this is a one-way operation. Once you `eject`, you can’t go back!*
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
